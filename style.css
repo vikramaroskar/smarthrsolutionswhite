@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap");
 
+:root {
+    --orange-color: rgb(255, 98, 3, 1);
+    --orange-lite: rgb(255, 200, 8, 0.9);
+    --grey-color: rgb(63, 69, 81, 1);
+    --white-color: #fff;
+  }
+
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +19,23 @@ body {
 
 header {
   display: flex;
-  height: 15vh;
+  height: 20vh;
   width: 90%;
   margin: auto;
   align-items: center;
+}
+
+
+footer {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange-color);
+}
+
+footer p {
+    text-align: center;
 }
 
 .logo-container,
@@ -31,6 +51,8 @@ header {
 .logo {
   font-weight: 400;
   margin: 5px;
+  padding: 20px 0 0 0;
+  
 }
 
 nav {
@@ -47,7 +69,7 @@ nav {
 }
 
 .nav-link {
-  color: #5f5f79;
+  color: var(--orange-color);
   font-size: 18px;
   text-decoration: none;
 }
@@ -56,8 +78,9 @@ nav {
   display: flex;
   width: 90%;
   margin: auto;
-  min-height: 70vh;
+  min-height: 65vh;
   align-items: center;
+  padding-top: 4rem;
 }
 
 .introduction {
@@ -67,7 +90,7 @@ nav {
 .intro-text h1 {
   font-size: 44px;
   font-weight: 500;
-  background: linear-gradient(to right, #494964, #6f6f89);
+  background: linear-gradient(to right, var(--orange-color), var(--orange-lite));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -75,17 +98,19 @@ nav {
 .intro-text p {
   margin: 5px;
   font-size: 22px;
-  color: #585772;
+  color: var(--orange-lite);
 }
 
 .cta {
   padding: 50px 0 0 0;
+
 }
 
 .cta-know {
-  border: 2px solid #c36cbb;
+  border: 2px solid var(--orange-color);
+  border-radius: 5px;
   background: transparent;
-  color: #c36cbb;
+  color: var(--orange-color);
   width: 150px;
   height: 50px;
   cursor: pointer;
@@ -93,8 +118,9 @@ nav {
 }
 
 .cta-contact {
-  background: #c36cbb;
+  background: var(--orange-color);
   border: none;
+  border-radius: 5px;
   color: #fff;
   width: 150px;
   height: 50px;
@@ -113,7 +139,7 @@ nav {
   /*box-shadow: 3px 3px 3px black;*/
   filter: drop-shadow(0px 5px 3px black);
   animation: drop 1.5s ease;
-
+  border-radius: 5px;
 }
 
 .big-circle {
@@ -151,6 +177,35 @@ nav {
     right: 20%;
 }
 
+
+.vision-section {
+    background-color: var(--orange-color);
+    display: grid;
+    padding-top: 2rem;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+    grid-template-columns: repeat(6, 1fr);
+    border: 1px;
+    grid-auto-rows: minmax(6rem, auto);
+    color: var(--grey-color);
+}
+
+.vision, 
+.mission{
+    grid-column-start: 2; 
+    grid-column-end: 6; 
+}
+
+.values {
+   
+    grid-column-start: 2; 
+    grid-column-end: 6; 
+}
+
+
+
+
+
 @keyframes drop {
     0% {
         opacity: 0;
@@ -164,6 +219,70 @@ nav {
     }
 }
 
+
+.services-main{
+    display: grid;
+    gap: 2px;
+    grid-template-columns: 1fr 3fr 3fr 1fr;
+    padding-top: 4rem;
+}
+
+.services-main h2 {
+    text-align: center;
+}
+
+.service-dark {
+    background-color: var(--orange-color);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--grey-color);
+    
+}
+
+.service-lite {
+    background-color: var(--orange-lite);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--grey-color);
+}
+
+
+.services-main ul {
+    
+    text-decoration: none;
+    padding: 5px;
+}
+
+.services-main li {
+    list-style: none;
+    line-height: 2.15rem;
+}
+
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    padding-top: 4rem;
+    margin: auto;
+}
+
+.about-co {
+    padding-bottom: 2rem;
+}
+.about-co h2 {
+    color: var(--orange-color);
+    text-align: center;
+}
+
+.about-co p{
+    padding: 1rem;
+    align-items: flex-start;
+    color: var(--grey-color);
+
+}
+
+/* small screen */
 @media screen and (max-width: 750px) {
     header {
         flex-direction: column;
@@ -217,10 +336,21 @@ nav {
         height: 80%;
         
     }
+    
     .small-circle,
-    .mid-circle,
+    .mid-circle {
+        display: none;
+    }
+    
     .big-circle {
         opacity: 0.2;
+        top: -10vh;
+        right: -20vw;
+    }
+
+    .services-main {
+        padding: 15vh;
+        grid-template-columns: 1fr;
     }
 
 }
