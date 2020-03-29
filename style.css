@@ -381,16 +381,21 @@ input[type="text"] {
   }
   .cover {
     margin: 10px;
+    padding-top: 15vh;
     align-items: center;
-    display: flex;
+    display: none;
   }
   .picture-select {
     bottom: 5%;
     right: 50%;
     width: 50%;
     transform: translate(50%, 5%);
+    display: none;
   }
 
+  .vision-section {
+    padding-top: 15vh;
+  }
   .cover img {
     display: flex;
     height: 80%;
