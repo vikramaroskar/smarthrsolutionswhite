@@ -287,8 +287,8 @@ nav {
 }
 
 .contact-form h2 {
-    text-align:  center;
-    color: var(--orange-color);
+  text-align: center;
+  color: var(--orange-color);
 }
 
 .contact-form-form {
@@ -300,17 +300,18 @@ nav {
 }
 
 .contact-form-form h3 {
-    color: var(--orange-color);
+  color: var(--orange-color);
 }
 
-.contact-form-form label, area {
+.contact-form-form label,
+area {
   margin: 10px;
   padding: 2px;
 }
 
 input[type="text"] {
-    min-height: 35px;
-    font-size: 30px;
+  min-height: 35px;
+  font-size: 30px;
 }
 
 .contact-form-form button {
@@ -344,13 +345,48 @@ input[type="text"] {
   padding: 2px;
 }
 
+.industries-section {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 60vh;
+  align-items: center;
+  padding-top: 3rem;
+  height: 100%;
+  flex-direction: column;
+}
+
+.industries-wrapper h2 {
+  text-align: center;
+  color: var(--orange-color);
+}
+
+.industries-list {
+  border-radius: 10px;
+}
+
+.industries-wrapper ul {
+  padding: 5px;
+}
+
+.industries-list li {
+  list-style: none;
+  line-height: 2.15rem;
+}
+
+.industry {
+  background-color: var(--orange-lite);
+  padding: 10px;
+  color: var(--grey-color);
+}
+
 /* small screen */
-@media(max-width: 750px) {
+@media (max-width: 750px) {
   header {
     flex-direction: column;
     align-items: center;
   }
-  main  {
+  main {
     margin-top: 15vh;
   }
   .nav-links {
@@ -432,9 +468,9 @@ input[type="text"] {
     align-items: center;
     margin-top: 15vh;
   }
- 
+
   .contact-form-form {
-      width: 90%;
-      margin: auto;
+    width: 90%;
+    margin: auto;
   }
 }
