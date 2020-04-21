@@ -378,18 +378,20 @@ input[type="text"] {
 }
 
 .industries-list {
-
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   grid-auto-rows: 100px;
+  padding: 5px;
+  
 }
 
 .industry {
   background-color: var(--orange-lite);
   padding: 10px;
-  color: var(--grey-color);
+  color: var(--white-color);
   border-radius: 5px;
+  box-shadow: 4px 6px var(--orange-color) ;
 }
 
 /* small screen */
