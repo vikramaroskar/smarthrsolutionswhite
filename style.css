@@ -5,8 +5,8 @@
   --orange-lite: rgb(250, 250, 250, 0.9);
   --grey-color: rgb(225, 225, 225, 1);
   --white-color: #333333;
-  --brown-dark:;
-  --brown-light:
+  --brown-dark: #2b1d14;
+  --brown-light: #FFF8DC;
 }
 
 * {
@@ -212,7 +212,7 @@ nav {
 }
 
 .vision-section {
-  background-color: var(--orange-color);
+  background-color: var(--brown-dark);
   display: grid;
   padding-top: 2rem;
   margin-top: 4rem;
@@ -220,27 +220,27 @@ nav {
   grid-template-columns: repeat(12, 1fr);
   border: 1px;
   grid-auto-rows: minmax(6rem, auto);
-  color: var(--white-color);
+  color: var(--brown-light);
 }
 
 .mission-section {
-  background-color: var(--white-color);
+  background-color: var(--brown-light);
   display: grid;
   padding-top: 2rem;
   grid-template-columns: repeat(12, 1fr);
   border: 1px;
   grid-auto-rows: minmax(6rem, auto);
-  color: var(--orange-color);
+  color: var(--brown-dark);
 }
 
 .values-section {
-  background-color: var(--orange-color);
+  background-color: var(--brown-dark);
   display: grid;
   padding: 1rem 0 1rem 0;
   grid-template-columns: repeat(12, 1fr);
   border: 1px;
   grid-auto-rows: minmax(6rem, auto);
-  color: var(--white-color);
+  color: var(--brown-light);
 }
 
 .vision,
